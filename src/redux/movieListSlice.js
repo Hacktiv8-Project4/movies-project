@@ -1,13 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
-
-const URL = 
+const initialState = {};
 
 const movieList = createSlice({
-   name:'movieList',
-   initialState,
-   reducers:
-})
+  name: "movieList",
+  initialState,
+  reducers: {},
+});
 
-
-export default movieListSlice.reducer
+export default movieListSlice.reducer;

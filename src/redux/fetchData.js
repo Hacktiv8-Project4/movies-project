@@ -1,17 +1,7 @@
-import { createAsyncThunk } from '@reduxjs/toolkit'
-import axios from 'axios'
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-export const getData = createAsyncThunk('getData', async () => {
-  const url = import.meta.env.BASE_URL + '/products'
-  try {
-    const response = await axios.get(url)
-    return response.data
-  } catch (error) {
-    console.error(error)
-  }
-})
-
-
+export const getData = createAsyncThunk("fetchData", async () => {});
 
 // {
 //    "Title": "Guardians of the Galaxy Vol. 2",
