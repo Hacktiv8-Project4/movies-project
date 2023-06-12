@@ -1,14 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const ID_URL = "";
-
 const initialState = {
   MovieList: [],
 };
 
 export const fetchIdNews = createAsyncThunk("fetchMovieList", async () => {
-  const response = await axios.get(L);
+  const response = await axios.get("");
   return response.data;
 });
 
