@@ -1,7 +1,9 @@
 import React from "react";
 import CardComponent from "../components/cardComponent";
+import { useDispatch,useSelector } from "react-redux";
 
 function homePage() {
+  const dispatch = useDispatch()
   const movies = [
     {
       Title: "Star Wars: Episode IV - A New Hope",
