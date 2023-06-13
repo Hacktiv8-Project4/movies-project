@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HeaderComponent from "./components/headerComponent";
-import HomePage from "./pages/homePage";
-import DetailPage from "./pages/detailPage";
-import SavedPage from "./pages/savedPage";
-import SearchPage from "./pages/searchPage";
+import HeaderComponent from "./components/HeaderComponent";
+import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
+import SavedPage from "./pages/SavedPage";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/detail" element={<DetailPage />}></Route>
         <Route path="/saved" element={<SavedPage />}></Route>
-        <Route path="/search/:query" element={<SearchPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
