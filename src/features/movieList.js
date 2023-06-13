@@ -1,25 +1,20 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-
+import { getData } from "../utils/getData";
+// intialState
 const initialState = {
   MovieList: [],
 };
-
-export const fetchIdNews = createAsyncThunk("fetchMovieList", async () => {
-  const response = await axios.get("");
-  return response.data;
-});
-
-export const movieList = createSlice({
+// reducer
+export const movieListSlice = createSlice({
   name: "movieList",
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(fetchIdNews.pending);
-    builder.addCase(fetchIdNews.fulfilled, (state, { payload }) => {
+    builder.addCase(getData.pending);
+    builder.addCase(getData.fulfilled, (state, { payload }) => {
       state.MovieList = payload;
     });
-    builder.addCase(fetchIdNews.rejected);
+    builder.addCase(getData.rejected);
   },
 });
 
-export default movieList.reducer;
+export default movieListSlice.reducer;
