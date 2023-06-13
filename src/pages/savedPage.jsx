@@ -4,10 +4,11 @@ import CardSaveComponent from "../components/cards/CardSaveComponent";
 
 function SavedPage() {
   const savedData = useSelector((state) => state.saved.saved);
+  console.log(savedData);
   return (
     <div>
       savedPage
-      <CardSaveComponent movie={savedData} />
+      <CardSaveComponent saved={savedData} />
     </div>
   );
 }
