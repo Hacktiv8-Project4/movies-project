@@ -15,7 +15,7 @@ function HomePage() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="App">
       {isLoadingData === true ? (
         <p>Loading...</p>
       ) : moviesData ? (

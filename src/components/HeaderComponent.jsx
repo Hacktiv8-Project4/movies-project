@@ -1,63 +1,79 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchSearchMovies } from "../redux/slices/moviesSlice";
 
 function HeaderComponent() {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
+  let [open, setOpen] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(fetchSearchMovies(searchTerm));
     setSearchTerm("");
   };
+
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-white">Logo</span>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a
-                  href="/"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Home
-                </a>
-                <a
-                  href="/saved"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Favorites
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="relative mx-auto text-gray-600">
-              <form onSubmit={handleSearch} className="flex">
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Search movies..."
-                  className="px-4 py-2 border rounded-md"
-                />
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 ml-2 rounded-md"
-                >
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
+    <div className="shadow-md w-full fixed top-0 left-0">
+      <div className="bg-transparent md:flex items-center justify-between py-4 md:px-10 px-7">
+        <div className="font-bold text-2xl cursor-pointer items-center font-[Poppins] text-gray-300">
+          ListMovies
         </div>
+        <div
+          onClick={() => setOpen(!open)}
+          className="text-3xl absolute right-8 top-3 cursor-pointer md:hidden"
+        >
+          <i
+            className={
+              open
+                ? "fa-solid fa-xmark text-gray-300"
+                : "fa-solid fa-bars text-gray-300"
+            }
+          ></i>
+        </div>
+
+        <ul
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            open ? "" : "top-[-490px]"
+          }`}
+        >
+          <li className="md:ml-8 text-md md:my-0 my-7">
+            <Link
+              to="/"
+              className="text-gray-300 hover:text-gray-400 duration-500"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="md:ml-8 text-md md:my-0 my-7 mr-3">
+            <Link
+              to="/favorites"
+              className="text-gray-300 hover:text-gray-400 duration-500"
+            >
+              Favorites
+            </Link>
+          </li>
+          <div className="relative mx-auto text-gray-400">
+            <form onSubmit={handleSearch} className="flex">
+              <input
+                type="text"
+                placeholder="Search movies..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="px-2 py-1 bg-black/50 rounded-xl mr-2 focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="absolute left-40 mt-1 md:right-0 md:mt-1 md:mr-4"
+              >
+                <i className="fa-solid fa-magnifying-glass text-gray-200"></i>
+              </button>
+            </form>
+          </div>
+        </ul>
       </div>
-    </nav>
+    </div>
   );
 }
 
