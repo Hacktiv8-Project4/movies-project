@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HeaderComponent from "./components/headerComponent";
-import HomePage from "./pages/homePage";
-import DetailPage from "./pages/detailPage";
-import SavedPage from "./pages/savedPage";
-import SearchPage from "./pages/searchPage";
+import HeaderComponent from "./components/HeaderComponent";
+import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
+import SavedPage from "./pages/SavedPage";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
