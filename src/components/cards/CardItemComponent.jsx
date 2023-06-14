@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../redux/slices/savedSlice";
 import CardComponent from "./CardComponent";
@@ -16,7 +16,7 @@ function CardItemComponent({ movie }) {
   };
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto mb-20">
         {movie?.map((mv, index) => {
           const isSaved = savedData.find((item) => item.Title === mv.Title);
           let button;
@@ -29,7 +29,7 @@ function CardItemComponent({ movie }) {
           } else {
             button = (
               <button onClick={() => handleSaveClick(mv)}>
-                <i className="fa-xl items-center fa-regular fa-bookmark"></i>
+                <i className="fa-xl items-center fa-regular fa-bookmark text-gray-300"></i>
               </button>
             );
           }

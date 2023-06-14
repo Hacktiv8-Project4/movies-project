@@ -15,11 +15,17 @@ function HomePage() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div >
       {isLoadingData === true ? (
         <p>Loading...</p>
       ) : moviesData ? (
+        <>
+        {/* <HeroComponent movie={moviesData}/> */}
+        <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20">MOVIES </h1>
         <CardItemComponent movie={moviesData} />
+        <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20 ">SERIES</h1>
+        <CardItemComponent movie={moviesData} />
+        </>
       ) : (
         <p>No movies found.</p>
       )}
