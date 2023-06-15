@@ -4,10 +4,12 @@ import CardSaveComponent from "../components/cards/CardSaveComponent";
 
 function SavedPage() {
   const savedData = useSelector((state) => state.saved.saved);
-  console.log(savedData);
+  // console.log(savedData);
   return (
-    <div>
-      savedPage
+    <div className="h-screen mt-20 ">
+      <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20">
+        FAVORITES{" "}
+      </h1>
       <CardSaveComponent saved={savedData} />
     </div>
   );
