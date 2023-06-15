@@ -7,6 +7,9 @@
       html{
          @apply bg-gradient-to-b from-[#000]  to-[#00184b] min-h-full w-full
       }
+      body{
+         @apply h-full
+      }
       nav{
          @apply bg-black backdrop-blur-sm 
       }

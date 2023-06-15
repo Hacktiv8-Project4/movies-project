@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { add, remove } from "../../redux/slices/savedSlice";
 import CardComponent from "./CardComponent";
 
+
 function CardSaveComponent({ saved }) {
   const dispatch = useDispatch();
 
@@ -14,7 +15,9 @@ function CardSaveComponent({ saved }) {
     dispatch(remove(item?.Title));
   };
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto ">
+    <>
+   
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto  " >
       {saved?.map((movie, index) => {
         const isSaved = saved.find((item) => item.Title === movie.Title);
         let button;
@@ -35,6 +38,7 @@ function CardSaveComponent({ saved }) {
         return <CardComponent movie={movie} button={button} key={index} />;
       })}
     </div>
+      </>
   );
 }
 

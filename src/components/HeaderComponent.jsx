@@ -18,8 +18,8 @@ function HeaderComponent() {
 
           <div className="flex items-center max-sm:hidden ">
             <div className="flex-shrink-0 max-sm:invisible">
-              
-              <span className="text-white cursor-pointer">📽️Cinema1XX</span>
+              <i className="fa-solid fa-film mr-1" style={{color:" #ffffff"}}/>
+              <span className="text-white cursor-pointer font-bold">MovieList</span>
             </div>
 
             <div className="hidden md:block">

@@ -16,7 +16,7 @@ function CardItemComponent({ movies }) {
   };
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto mb-20 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto mb-20 relative">
         {movies?.map((movie, index) => {
           const isSaved = savedData.find((item) => item.Title === movie.Title);
           let button;
@@ -36,6 +36,7 @@ function CardItemComponent({ movies }) {
           return <CardComponent movie={movie} button={button} key={index} />;
         })}
       </div>
+      
     </>
   );
 }

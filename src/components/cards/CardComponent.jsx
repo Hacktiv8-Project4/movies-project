@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function CardComponent({ movie, button }) {
   return (
     <>
@@ -25,6 +26,7 @@ function CardComponent({ movie, button }) {
 
         
       </div>
+     
     </>
   );
 }
