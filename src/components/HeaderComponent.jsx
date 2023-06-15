@@ -12,14 +12,14 @@ function HeaderComponent() {
     setSearchTerm("");  
   };
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-30 h-[72px] bg-opacity-5  ">
+    <nav className=" fixed top-0 left-0 right-0 z-30 h-[72px] bg-opacity-5  backdrop-blur-sm bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16 max-sm:justify-center ">
 
           <div className="flex items-center max-sm:hidden ">
             <div className="flex-shrink-0 max-sm:invisible">
-              <i className="fa-solid fa-film mr-1" style={{color:" #ffffff"}}/>
-              <span className="text-white cursor-pointer font-bold">MovieList</span>
+              <i className="fa-solid fa-film mr-1" style={{color:"rgb(253 224 71 )"}}/>
+              <span className="text-white cursor-pointer font-bold font-[Poppins]">MovieList</span>
             </div>
 
             <div className="hidden md:block">
@@ -53,7 +53,7 @@ function HeaderComponent() {
                 />
                 <button
                   type="submit"
-                  className="bg-gray-400 text-white px-4 py-2 ml-2 rounded-xl bg-opacity-30   backdrop-blur-sm hover:bg-gray-300 hover:text-black"
+                  className="bg-gray-300 text-white px-4 py-2 ml-2 rounded-xl bg-opacity-30    hover:bg-gray-300 hover:text-black"
                 >
                   Search
                 </button>

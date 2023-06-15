@@ -12,13 +12,14 @@ function CardItemComponent({ movies }) {
   };
 
   const handleUnSaveClick = (item) => {
-    dispatch(remove(item?.Title));
+    dispatch(remove(item?.title));
   };
+
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto mb-20 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-5 px-20 m-auto  ">
         {movies?.map((movie, index) => {
-          const isSaved = savedData.find((item) => item.Title === movie.Title);
+          const isSaved = savedData.find((item) => item.title === movie.title);
           let button;
           if (isSaved) {
             button = (

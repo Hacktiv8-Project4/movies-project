@@ -11,7 +11,6 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// eslint-disable-next-line import/no-anonymous-default-export
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
