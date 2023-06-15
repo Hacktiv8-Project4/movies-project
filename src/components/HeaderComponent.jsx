@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchSearchMovies } from "../redux/slices/moviesSlice";
+import {
+  fetchSearchMovies,
+  fetchSearchSeries,
+} from "../redux/slices/moviesSlice";
 
 function HeaderComponent() {
   const dispatch = useDispatch();
@@ -11,6 +14,7 @@ function HeaderComponent() {
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(fetchSearchMovies(searchTerm));
+    dispatch(fetchSearchSeries(searchTerm));
     setSearchTerm("");
   };
 
@@ -48,7 +52,7 @@ function HeaderComponent() {
           </li>
           <li className="md:ml-8 text-md md:my-0 my-7 mr-3">
             <Link
-              to="/favorites"
+              to="/saved"
               className="text-gray-300 hover:text-gray-400 duration-500"
             >
               Favorites
