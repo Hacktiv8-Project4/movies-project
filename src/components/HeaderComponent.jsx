@@ -12,7 +12,7 @@ function HeaderComponent() {
     setSearchTerm("");  
   };
   return (
-    <nav className=" sticky top-0 z-30 h-[72px] bg-opacity-30  ">
+    <nav className=" fixed top-0 left-0 right-0 z-30 h-[72px] bg-opacity-5  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16 max-sm:justify-center ">
 
@@ -43,13 +43,13 @@ function HeaderComponent() {
 
           <div className="flex ">
             <div className="relative mx-auto ">
-              <form onSubmit={handleSearch} className="flex text-white">
+              <form onSubmit={handleSearch} className="flex text-white ">
                 <input
                   type="text"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Search a movie "
-                  className="px-4 py-2 border rounded-3xl pr-16 bg-transparent"
+                  className="px-4 py-2 border rounded-3xl pr-16 bg-transparent focus:outline-none"
                 />
                 <button
                   type="submit"

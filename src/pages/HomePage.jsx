@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CardItemComponent from "../components/cards/CardItemComponent";
 import { fetchMovies } from "../redux/slices/moviesSlice";
+import HeroSection from "../components/HeroSection";
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -20,11 +21,13 @@ function HomePage() {
         <p>Loading...</p>
       ) : moviesData ? (
         <>
-        {/* <HeroComponent movie={moviesData}/> */}
-        <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20">MOVIES </h1>
-        <CardItemComponent movie={moviesData} />
-        <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20 ">SERIES</h1>
-        <CardItemComponent movie={moviesData} />
+          <HeroSection movies={moviesData}/>
+        <section className="relative -top-36">
+          <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20">MOVIES </h1>
+          <CardItemComponent movies={moviesData} />
+          <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20 ">SERIES</h1>
+          <CardItemComponent movies={moviesData} />
+        </section>
         </>
       ) : (
         <p>No movies found.</p>

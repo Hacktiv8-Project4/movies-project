@@ -4,8 +4,8 @@
 
 
    @layer base {
-      body{
-         @apply bg-gradient-to-b from-[#000]  to-[#00184b] h-full w-full
+      html{
+         @apply bg-gradient-to-b from-[#000]  to-[#00184b] min-h-full w-full
       }
       nav{
          @apply bg-black backdrop-blur-sm 

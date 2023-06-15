@@ -15,24 +15,24 @@ function CardSaveComponent({ saved }) {
   };
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto ">
-      {saved?.map((mv, index) => {
-        const isSaved = saved.find((item) => item.Title === mv.Title);
+      {saved?.map((movie, index) => {
+        const isSaved = saved.find((item) => item.Title === movie.Title);
         let button;
         if (isSaved) {
           button = (
-            <button onClick={() => handleUnSaveClick(mv) } >
+            <button onClick={() => handleUnSaveClick(movie) } >
               
               <i className="fa-xl text-yellow-400 items-center fa-solid fa-bookmark "></i>
             </button>
           );
         } else {
           button = (
-            <button onClick={() => handleSaveClick(mv)}>
+            <button onClick={() => handleSaveClick(movie)}>
               <i className="fa-xl items-center fa-regular fa-bookmark"></i>
             </button>
           );
         }
-        return <CardComponent mv={mv} button={button} key={index} />;
+        return <CardComponent movie={movie} button={button} key={index} />;
       })}
     </div>
   );
