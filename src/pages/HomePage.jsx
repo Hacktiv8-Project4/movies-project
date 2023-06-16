@@ -12,10 +12,11 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(fetchMovies());
+  
   }, [dispatch]);
 
   return (
-    <div >
+    <div>
       {isLoadingData === true ? (
         <p>Loading...</p>
       ) : moviesData ? (

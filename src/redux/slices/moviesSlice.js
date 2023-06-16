@@ -5,11 +5,12 @@ const initialState = {
   isLoading: false,
   errorMessage: "",
   movies: [],
+  series: [],
 };
 
 export const fetchMovies = createAsyncThunk("fetchMoviesList", async () => {
   const response = await axios.get(
-    `https://api.themoviedb.org/3/discover/movie?api_key=236242cfb53f88ab493d8d87d7f64257`
+    `${process.env.REACT_APP_BASE_API}3/discover/movie?api_key=${process.env.REACT_KEY}`
   );
   return response.data.results;
 });
@@ -18,7 +19,7 @@ export const searchMovies = createAsyncThunk(
   "fetchSearchMovies",
   async (searchTerm) => {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=236242cfb53f88ab493d8d87d7f64257`
+      `${process.env.REACT_APP_BASE_API}3/search/movie?query=${searchTerm}&api_key=236242cfb53f88ab493d8d87d7f64257`
     );
     return response.data.results;
   }

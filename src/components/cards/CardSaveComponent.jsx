@@ -17,7 +17,7 @@ function CardSaveComponent({ saved }) {
   return (
     <>
    
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto  " >
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 px-20 m-auto " >
       {saved?.map((movie, index) => {
         const isSaved = saved.find((item) => item.title === movie.title);
         let button;
