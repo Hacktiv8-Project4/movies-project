@@ -22,7 +22,7 @@ export const searchMovies = createAsyncThunk(
 
       // `${process.env.REACT_APP_BASE_API}3/search/movie?query=${searchTerm}&api_key=${process.env.REACT_APP_KEY}`
     );
-    return response.data.Search;
+    return response.data.results;
   }
 );
 

@@ -10,6 +10,7 @@ function HeaderComponent() {
     e.preventDefault();
     dispatch(searchMovies(searchTerm));
     setSearchTerm("");  
+    console.log(searchTerm)
   };
   return (
     <nav className="  md:fixed md:top-0 md:left-0 md:right-0 z-30 h-[72px] bg-opacity-20  backdrop-blur-sm bg-black">

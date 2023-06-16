@@ -12,7 +12,6 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(fetchMovies());
-    console.log(moviesData)
   }, [dispatch]);
 
   return (
