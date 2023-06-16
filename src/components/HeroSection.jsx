@@ -9,7 +9,7 @@ const HeroSection = ({movies}) => {
       const interval = setInterval(() => {
         const randomIndex = Math.floor(Math.random() * movies.length);
         setIndexPoster(randomIndex);
-      }, 5000);
+      }, 4000);
   
       return () => clearInterval(interval);
     }, [movies]);
