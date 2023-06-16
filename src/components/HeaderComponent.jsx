@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchSearchMovies } from "../redux/slices/moviesSlice";
+import { searchMovies } from "../redux/slices/moviesSlice";
 
 function HeaderComponent() {
   const dispatch = useDispatch();
@@ -8,7 +8,7 @@ function HeaderComponent() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(fetchSearchMovies(searchTerm));
+    dispatch(searchMovies(searchTerm));
     setSearchTerm("");  
   };
   return (
