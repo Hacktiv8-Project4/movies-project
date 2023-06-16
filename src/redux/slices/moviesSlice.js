@@ -9,20 +9,20 @@ const initialState = {
 
 export const fetchMovies = createAsyncThunk("fetchMoviesList", async () => {
   const response = await axios.get(
-    `${process.env.REACT_APP_BASE_API}3/discover/movie?api_key=${process.env.REACT_APP_KEY}`
+    `https://api.themoviedb.org/3/discover/movie?api_key=236242cfb53f88ab493d8d87d7f64257`
   );
   return response.data.results;
 });
 
-// search
 export const searchMovies = createAsyncThunk(
   "fetchSearchMovies",
   async (searchTerm) => {
     const response = await axios.get(
-      // "https://api.themoviedb.org/3/search/movie?query=spiderman&api_key=236242cfb53f88ab493d8d87d7f64257"
-      `https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=${process.env.REACT_APP_KEY}`
+      `https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=236242cfb53f88ab493d8d87d7f64257`
+
+      // `${process.env.REACT_APP_BASE_API}3/search/movie?query=${searchTerm}&api_key=${process.env.REACT_APP_KEY}`
     );
-    return response.data.results;
+    return response.data.Search;
   }
 );
 

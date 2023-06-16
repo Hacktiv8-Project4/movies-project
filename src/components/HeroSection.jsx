@@ -20,8 +20,8 @@ const HeroSection = ({movies}) => {
 
   return (
     <>
-    <div className=" flex justify-center items-centermb-10  h-[800px] bg-gradient-to-t from-black"  >
-      <img className="-z-10  w-full h-full object-cover " src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
+    <div className=" flex justify-center items-center mb-10 max-h-[1000px] max-w-ful bg-gradient-to-t from-black"  >
+      <img className="-z-20 w-full h-full object-cover opacity-90" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
     </div>
     </>
   )

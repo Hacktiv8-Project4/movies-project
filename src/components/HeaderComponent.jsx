@@ -12,7 +12,7 @@ function HeaderComponent() {
     setSearchTerm("");  
   };
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-30 h-[72px] bg-opacity-5  backdrop-blur-sm bg-black">
+    <nav className="  md:fixed md:top-0 md:left-0 md:right-0 z-30 h-[72px] bg-opacity-20  backdrop-blur-sm bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16 max-sm:justify-center ">
 

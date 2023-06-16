@@ -22,7 +22,7 @@ function HomePage() {
       ) : moviesData ? (
         <>
           <HeroSection movies={moviesData}/>
-        <section className="relative -top-96">
+        <section className="relative -top-[250px] max-lg:-top-[150px]">
           <h1 className=" inline-block text-white  border-b-gray-100 border-b-2 ml-20">MOVIES </h1>
           <CardItemComponent movies={moviesData} />
         </section>
