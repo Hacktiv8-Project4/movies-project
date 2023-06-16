@@ -8,7 +8,7 @@ function CardComponent({ movie, button }) {
       <div className="  group max-w-sm rounded overflow-hidden shadow-lg shadow-slate-800 relative " >
         {movie.poster_path?
          <img className=" rounded-xl h-full   " src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-        :<img className=" rounded-xl" src={require('../../assets/notFound.png')}/>
+        :<img className=" rounded-xl" src={require('../../assets/notFound.png')} alt="notFoundImage"/>
         }
 
         
