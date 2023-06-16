@@ -21,7 +21,8 @@ const HeroSection = ({movies}) => {
   return (
     <>
     <div className=" flex justify-center items-center mb-10 max-h-[1000px] max-w-ful bg-gradient-to-t from-black"  >
-      <img className="-z-20 w-full h-full object-cover opacity-90" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
+      {movie ? ( <img className="-z-20 w-full h-full object-coveropacity-90" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />):null}
+       {/* <img className="-z-20 w-full h-full object-coveropacity-90" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} /> */}
     </div>
     </>
   )

@@ -18,6 +18,7 @@ function HeaderComponent() {
     <div className="shadow-md w-full fixed top-0 left-0 z-30 h-[72px] bg-opacity-20  backdrop-blur-sm bg-black ">
     <div className="bg-transparent md:flex items-center justify-between py-4 md:px-10 px-7">
       <div className="font-bold text-2xl cursor-pointer items-center font-[Poppins] text-gray-300">
+      <i className="fa-solid fa-film mr-1" style={{color:"rgb(253 224 71 )"}}/> 
         ListMovies
       </div>
       <div
