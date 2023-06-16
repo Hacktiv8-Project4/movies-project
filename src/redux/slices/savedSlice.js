@@ -10,7 +10,7 @@ export const savedSlice = createSlice({
   reducers: {
     add: (state, action) => {
       const existsItem = state.saved?.find(
-        (item) => item.Title === action.payload?.Title
+        (item) => item.title === action.payload?.title
       );
       if (!existsItem) {
         state.saved?.push(action.payload);
@@ -19,7 +19,7 @@ export const savedSlice = createSlice({
     },
     remove: (state, action) => {
       const removeItem = state.saved?.filter(
-        (item) => item.Title !== action.payload
+        (item) => item.title !== action.payload
       );
       state.saved = removeItem;
     },
