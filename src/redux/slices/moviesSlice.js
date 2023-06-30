@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchMovies = createAsyncThunk("fetchMoviesList", async () => {
   const response = await axios.get(
-    `${process.env.REACT_APP_BASE_API}3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`
+    `${process.env.REACT_APP_BASE_API}3/discover/movie?api_key=${process.env.REACT_APP_X}`
   );
   return response.data.results;
 });
@@ -19,7 +19,7 @@ export const searchMovies = createAsyncThunk(
   "fetchSearchMovies",
   async (searchTerm) => {
     const response = await axios.get(
-      `${process.env.REACT_APP_BASE_API}3/search/movie?query=${searchTerm}&api_key=${process.env.REACT_APP_API_KEY}`
+      `${process.env.REACT_APP_BASE_API}3/search/movie?query=${searchTerm}&api_key=${process.env.REACT_APP_X}`
     );
     return response.data.results;
   }
