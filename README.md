@@ -1,4 +1,4 @@
-## 👨‍💻 Screenshots
+## 👨‍💻 Tim member
 - ILYAS MUHLISIN
 - MUHAMMAD AMINUDDIN R
 - ABEL PRATAMA RAMADHAN LULUT
